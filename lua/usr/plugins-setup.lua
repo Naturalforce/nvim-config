@@ -48,6 +48,14 @@ return require('packer').startup(function(use)
       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
+  use("szw/vim-maximizer")
+  use("numToStr/Comment.nvim")
+  use("tpope/vim-surround")
+
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
+  use("jose-elias-alvarez/null-ls.nvim")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

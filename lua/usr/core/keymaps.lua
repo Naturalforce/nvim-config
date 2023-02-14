@@ -32,3 +32,5 @@ keymap.set("n", "<leader>hcc", ":HopChar2MW<cr>")
 keymap.set("n", "<leader>hl", ":HopLine<cr>")
 keymap.set("n", "<leader>hls", ":HopLineStart<cr>")
 
+-- maximizer
+keymap.set("n", "<leader>sm", ":MaximizerToggle<cr>")
