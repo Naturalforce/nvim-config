@@ -5,8 +5,8 @@ if not status then
 end
 
 tn.setup({
-  style = "moon",
+  style = "day",
   dim_inactive = true
 })
 
-vim.cmd("colorscheme tokyonight-moon")
+vim.cmd("colorscheme tokyonight-day")

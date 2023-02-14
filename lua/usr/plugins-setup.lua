@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
+ 
+  -- 文件浏览器
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -30,16 +32,30 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+
+  -- 主题
   use 'folke/tokyonight.nvim'
+
+  -- 标点配对
   use {
     "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
   }
+
+  -- 文件查找
   use "nvim-lua/plenary.nvim"
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
   }
+
+  -- nvim状态栏美化
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani53/nvim-web-devicons', opot = true }
+  }
+
+  -- 快速移动光标
   use {
     'phaazon/hop.nvim',
     branch = 'v2', -- optional but strongly recommended
@@ -48,13 +64,34 @@ return require('packer').startup(function(use)
       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
-  use("szw/vim-maximizer")
-  use("numToStr/Comment.nvim")
-  use("tpope/vim-surround")
 
+  -- 窗口最大化
+  use("szw/vim-maximizer")
+  
+  -- 注释
+  use("numToStr/Comment.nvim")
+
+  -- 快速包裹
+  use("tpope/vim-surround")
+  use { "alexghergh/nvim-tmux-navigation" }
+
+  -- LSP Manager
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
   use("jose-elias-alvarez/null-ls.nvim")
+
+  -- LSP Config
+  use "neovim/nvim-lspconfig"
+
+  -- Auto Completion
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/nvim-cmp"
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip"
+  use "rafamadriz/friendly-snippets"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

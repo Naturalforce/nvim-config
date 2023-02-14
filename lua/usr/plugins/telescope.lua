@@ -6,7 +6,7 @@ end
 
 local actiions_setup, actions = pcall(require, "relescope.actions")
 
-if noot actitonos_setup then
+if not actitonos_setup then
   return 
 end
 
