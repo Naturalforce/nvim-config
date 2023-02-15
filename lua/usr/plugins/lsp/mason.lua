@@ -7,7 +7,7 @@ end
 local lspstatus, masonLsp = pcall(require, "mason-lspconfig")
 
 if not lspstatus then
-  return 
+  return
 end
 
 mason.setup()
