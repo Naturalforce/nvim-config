@@ -23,6 +23,8 @@ nullls.setup({
 local masonNullLs = require("mason-null-ls")
 masonNullLs.setup({
   ensure_installed = {},
-  automatic_installation = false,
-  automatic_setup = false,
+  automatic_installation = true,
+  automatic_setup = true,
 })
+
+vim.cmd('map <Leader>lf :lua vim.lsp.buf.format()<CR>')

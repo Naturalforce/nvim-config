@@ -14,3 +14,5 @@ require("usr.plugins.lsp.lspsaga")
 require("usr.plugins.lsp.null-ls")
 require("usr.plugins.treesitter")
 require("usr.plugins.trouble")
+
+require'mason-null-ls'.setup_handlers()
